@@ -10,11 +10,23 @@ This project is about Network architecture searching in SR domain.
 * tqdm
 
 
+## Data Path
+Only DIV2K dataset is not uploaded because of the project size restriction. [DIV2K Download link](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+
+```
+By using --dir_data option, you can change default data path. 
+Place the DIV2K Dataset into Project relative path ~/Dataset/DIV2K/ with HR, LR division.
+ex) HRdata format: ~/PycharmProjects/HNAS/Dataset/DIV2K/DIV2K_train_HR/0001.png
+    LRdata format: ~/PycharmProjects/HNAS/Dataset/DIV2K/DIV2K_train_LR_bicubic/X2/0001x2.png
+```
+then, demo script will be executed successfully.
+
+
 ## Quick start 
-Place the SR datasets to the path of  'dir_data' as defined in  the option.py file.  
+Place the SR datasets to the path of  'dir_data' as defined in the option.py file.  
 Or by using --dir_data option in args parser execution command, change data directory absolute path.  
 Run the following command to quick start our project
-
+before you try this, goto **Data Path** Devision in below to download DIV2K dataset.
 
 ```bash
     cd src       
@@ -54,14 +66,4 @@ If you use any part of this code in your research, please cite our paper:
   journal={arXiv preprint arXiv:2003.04619},
   year={2020}
 }
-```
-
-## Data Path
-```
-Only Div2K dataset is not uploaded because of the project size restriction.
-By using --dir_data option, you can change data path. 
-Place the DIV2K Dataset into Project relative path ~/Dataset/DIV2K/ with HR, LR division.
-ex) HRdata format: ~/PycharmProjects/HNAS/Dataset/DIV2K/DIV2K_train_HR/0001.png
-    LRdata format: ~/PycharmProjects/HNAS/Dataset/DIV2K/DIV2K_train_LR_bicubic/X2/0001x2.png
-then, demo script will be well executed.
 ```
